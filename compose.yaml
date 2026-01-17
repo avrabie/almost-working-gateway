@@ -13,7 +13,7 @@ services:
       - keycloak-data:/opt/keycloak/data
     ports:
       - "8002:8080"
-    command: start-dev --import-realm
+    command: ["start-dev", "--import-realm"]
 
 volumes:
   keycloak-data: {}
