@@ -28,7 +28,7 @@ Changes will not be re-applied once the realm exists in the database.
 
 ### How it works
 Keycloak listens internally on 8080
-Docker exposes it on http://localhost:7000
+Docker exposes it on http://localhost:8001
 All *.json files in ./keycloak/ are imported once
 Realm import happens:
  only at startup
@@ -37,9 +37,9 @@ Realm import happens:
 
 ## Access URLs
 
-- Keycloak: http://localhost:7000
-- Admin Console: http://localhost:7000/admin
-- Health Check: http://localhost:7000/health/live
+- Keycloak: http://localhost:8001
+- Admin Console: http://localhost:8001/admin
+- Health Check: http://localhost:8001/health/live
 
 ## Dev vs Prod Notes
 
