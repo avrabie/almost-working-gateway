@@ -9,7 +9,8 @@ services:
       KC_PROXY_ADDRESS_FORWARDING: true
       KC_FEATURES: preview
     volumes:
-      - ./.keycloak/intwork-realm.json:/opt/keycloak/data/import/intwork-realm.json:ro
+#      - ./.keycloak/intwork-realm.json:/opt/keycloak/data/import/intwork-realm.json:ro
+      - ./.keycloak/realm-export.json:/opt/keycloak/data/import/realm-export.json:ro
       - keycloak-data:/opt/keycloak/data
     ports:
       - "8002:8080"
