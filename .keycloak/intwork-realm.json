@@ -1,0 +1,62 @@
+{
+  "realm": "intwork",
+  "enabled": true,
+  "sslRequired": "none",
+  "roles": {
+    "realm": [
+      {
+        "name": "ADMIN",
+        "description": "Administrator role"
+      }
+    ]
+  },
+  "groups": [
+    {
+      "name": "Administrators",
+      "realmRoles": [
+        "ADMIN"
+      ]
+    }
+  ],
+  "clients": [
+    {
+      "clientId": "intwork-backend",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "dev-secret",
+      "redirectUris": [
+        "http://localhost:3000/*"
+      ],
+      "webOrigins": [
+        "http://localhost:3000"
+      ],
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": true
+    }
+  ],
+  "users": [
+    {
+      "username": "admin-user-test",
+      "enabled": true,
+      "email": "[test@test.com](mailto:test@test.com)",
+      "emailVerified": true,
+      "firstName": "TestName",
+      "lastName": "TestSurname",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "test",
+          "temporary": false
+        }
+      ],
+      "realmRoles": [
+        "ADMIN"
+      ],
+      "groups": [
+        "/Administrators"
+      ]
+    }
+  ]
+}

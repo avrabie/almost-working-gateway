@@ -16,10 +16,15 @@ public class GatewayApplication {
     @Bean
     public RouteLocator myRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route(p-> p.path("/hello").uri("http://localhost:8080"))
-                .route(p-> p.path("/minio/**").uri("http://localhost:8080"))
-                .route(p-> p.query("X-Amz-Signature")
+                .route(p -> p.path("/hello")
+                        .filters(f -> f.tokenRelay())
+                        .uri("http://localhost:8080"))
+                .route(p -> p.path("/greetings").uri("http://localhost:8080"))
+                .route(p -> p.path("/minio/**").uri("http://localhost:8080"))
+                .route(p -> p.query("X-Amz-Signature")
                         .uri("http://localhost:9000"))
+                .route(p -> p.path("/api/**")
+                        .uri("http://localhost:8081"))
                 .build();
     }
 
