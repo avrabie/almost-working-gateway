@@ -89,6 +89,7 @@ public class GatewaySecConfig {
         return authorities;
     }
 
+    // and this is how you get roles from the OIDC access token
     @Bean
     public ReactiveOAuth2UserService<OidcUserRequest, OidcUser> oidcUserService(ReactiveJwtDecoder jwtDecoder) {
         final OidcReactiveOAuth2UserService delegate = new OidcReactiveOAuth2UserService();
