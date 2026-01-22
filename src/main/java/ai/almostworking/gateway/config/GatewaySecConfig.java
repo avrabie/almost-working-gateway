@@ -38,7 +38,6 @@ public class GatewaySecConfig {
                 .authorizeExchange(exchange -> exchange
                                 .pathMatchers("/greetings").permitAll()
                                 .pathMatchers("/hello").hasAnyRole("manage-account", "view-profile")
-//                        .pathMatchers("/hello").hasAnyRole("pizdetz")
                                 .anyExchange().authenticated()
                 )
                 .oauth2Login(Customizer.withDefaults())

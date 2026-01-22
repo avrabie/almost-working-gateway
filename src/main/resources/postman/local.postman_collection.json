@@ -1,0 +1,552 @@
+{
+  "info": {
+    "_postman_id": "8b8c17ee-6125-491a-ac23-747cee1665a6",
+    "name": "local",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "1446308",
+    "_collection_link": "https://go.postman.co/collection/1446308-8b8c17ee-6125-491a-ac23-747cee1665a6?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "2Dumb2Code",
+      "item": [
+        {
+          "name": "download",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "dc099bf8-20fd-4ee3-a70a-a2dcf9735002",
+                  "src": "/Users/moldo/Downloads/non blocking the way.mp3",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseURL}}/minio/davide-bucket/download/non blocking the way.mp3",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "minio",
+                "davide-bucket",
+                "download",
+                "non blocking the way.mp3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "link",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "dc099bf8-20fd-4ee3-a70a-a2dcf9735002",
+                  "src": "/Users/moldo/Downloads/non blocking the way.mp3",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseURL}}/minio/davide-bucket/link/PT10M/non blocking the way.mp3",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "minio",
+                "davide-bucket",
+                "link",
+                "PT10M",
+                "non blocking the way.mp3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "link2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "dc099bf8-20fd-4ee3-a70a-a2dcf9735002",
+                  "src": "/Users/moldo/Downloads/non blocking the way.mp3",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseURL}}/minio/davide-bucket/link2/non blocking the way.mp3",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "minio",
+                "davide-bucket",
+                "link2",
+                "non blocking the way.mp3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "dc099bf8-20fd-4ee3-a70a-a2dcf9735002",
+                  "src": "/Users/moldo/Downloads/non blocking the way.mp3",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseURL}}/minio/davide-bucket/non blocking the way.mp3",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "minio",
+                "davide-bucket",
+                "non blocking the way.mp3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "upload",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "2fa6ff83-68b5-46c4-8c4d-751dcc7ff4bc",
+                  "src": "/Users/moldo/Downloads/non blocking the way.mp3"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseURL}}/minio/davide-bucket/upload",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "minio",
+                "davide-bucket",
+                "upload"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "bucket",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "2fa6ff83-68b5-46c4-8c4d-751dcc7ff4bc",
+                  "src": "/Users/moldo/Downloads/non blocking the way.mp3"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseURL}}/minio/davide-bucket/upload",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "minio",
+                "davide-bucket",
+                "upload"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "AlmostWorking Gateway",
+      "item": [
+        {
+          "name": "hello",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "grant_type",
+                  "value": "authorization_code",
+                  "type": "string"
+                },
+                {
+                  "key": "client_authentication",
+                  "value": "body",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "http://localhost:8002/realms/intwork/protocol/openid-connect/token",
+                  "type": "string"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "http://localhost:8002/realms/intwork/protocol/openid-connect/auth",
+                  "type": "string"
+                },
+                {
+                  "key": "useBrowser",
+                  "value": true,
+                  "type": "boolean"
+                },
+                {
+                  "key": "clientId",
+                  "value": "gateway-rest-client",
+                  "type": "string"
+                },
+                {
+                  "key": "clientSecret",
+                  "value": "TqOwvN7EBjXbX4ymF7v9VV3IftfbcpjM",
+                  "type": "string"
+                },
+                {
+                  "key": "redirect_uri",
+                  "value": "http://localhost:9090/hello",
+                  "type": "string"
+                },
+                {
+                  "key": "scope",
+                  "value": "openid profile email",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Cookie",
+                "value": "SESSION=_nz6DtDyZw08MqMjbH0LPBSC",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "2fa6ff83-68b5-46c4-8c4d-751dcc7ff4bc",
+                  "src": "/Users/moldo/Downloads/non blocking the way.mp3"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:9090/hello",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "hello"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "greetings",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "2fa6ff83-68b5-46c4-8c4d-751dcc7ff4bc",
+                  "src": "/Users/moldo/Downloads/non blocking the way.mp3"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:9090/hello",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "hello"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get link",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{keycloak_access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "2fa6ff83-68b5-46c4-8c4d-751dcc7ff4bc",
+                  "src": "/Users/moldo/Downloads/non blocking the way.mp3"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:9090/minio/{{bucker_name}}/link/PT10M/non blocking the way.mp3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "minio",
+                "{{bucker_name}}",
+                "link",
+                "PT10M",
+                "non blocking the way.mp3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "minio signature",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "2fa6ff83-68b5-46c4-8c4d-751dcc7ff4bc",
+                  "src": "/Users/moldo/Downloads/non blocking the way.mp3"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:9090/minio/stefan/link/PT10M/non blocking the way.mp3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "minio",
+                "stefan",
+                "link",
+                "PT10M",
+                "non blocking the way.mp3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create bucket",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{keycloak_access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "2fa6ff83-68b5-46c4-8c4d-751dcc7ff4bc",
+                  "src": "/Users/moldo/Downloads/non blocking the way.mp3"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:9090/minio/gateway",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "minio",
+                "gateway"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "upload",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{keycloak_access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "2fa6ff83-68b5-46c4-8c4d-751dcc7ff4bc",
+                  "src": "/Users/moldo/Downloads/non blocking the way.mp3"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:9090/minio/{{bucker_name}}/upload",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "minio",
+                "{{bucker_name}}",
+                "upload"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "2Dumb4Oauth2",
+      "item": [
+        {
+          "name": "grant password",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseURL",
+      "value": ""
+    },
+    {
+      "key": "keycloak_access_token",
+      "value": ""
+    },
+    {
+      "key": "bucker_name",
+      "value": ""
+    }
+  ]
+}
