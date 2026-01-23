@@ -1,3 +1,5 @@
+server:
+  port: 9090
 spring:
   application:
     name: gateway
@@ -33,6 +35,5 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: ${KEYCLOAK_ISSUER_URI:http://localhost:8002/realms/intwork}
-server:
-  port: 9090
+
 
