@@ -18,7 +18,7 @@ spring:
       client:
         registration:
           gateway-rest-api:
-            client-id: api-gateway-client
+            client-id: gateway-rest-client
             client-secret: ${GATEWAY_CLIENT_SECRET:TqOwvN7EBjXbX4ymF7v9VV3IftfbcpjM}
             scope:
               - openid
