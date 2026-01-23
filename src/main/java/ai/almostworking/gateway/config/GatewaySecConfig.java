@@ -47,7 +47,6 @@ public class GatewaySecConfig {
                 .securityContextRepository(new WebSessionServerSecurityContextRepository())
                 .authorizeExchange(exchange -> exchange
                                 .pathMatchers("/greetings").permitAll()
-//                                .pathMatchers("/hello").hasAnyRole("pizdetz")
                                 .pathMatchers("/hello").hasAnyRole("manage-account", "view-profile")
                                 .anyExchange().authenticated()
                 )
@@ -65,7 +64,7 @@ public class GatewaySecConfig {
     @Bean
     public WebSessionIdResolver webSessionIdResolver() {
         CookieWebSessionIdResolver resolver = new CookieWebSessionIdResolver();
-        resolver.setCookieName("GATEWAY_SESSION");
+        resolver.setCookieName("ALMOST_WORKING_SESSION");
         return resolver;
     }
 
@@ -142,10 +141,6 @@ public class GatewaySecConfig {
                 });
     }
 
-//    @Bean
-//    public ReactiveJwtDecoder jwtDecoder() {
-//        return ReactiveJwtDecoders.fromIssuerLocation("http://localhost:8002/realms/intwork");
-//    }
 
 
     // this Bean is for Microservices wanting to go through this Gateway
