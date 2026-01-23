@@ -47,6 +47,7 @@ public class GatewaySecConfig {
                 .securityContextRepository(new WebSessionServerSecurityContextRepository())
                 .authorizeExchange(exchange -> exchange
                                 .pathMatchers("/greetings").permitAll()
+//                                .pathMatchers("/hello").hasAnyRole("pizdetz")
                                 .pathMatchers("/hello").hasAnyRole("manage-account", "view-profile")
                                 .anyExchange().authenticated()
                 )
