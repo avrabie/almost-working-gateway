@@ -82,31 +82,27 @@ public class GatewaySecConfig {
     private Collection<GrantedAuthority> extractAuthorities(Map<String, Object> claims) {
         Collection<GrantedAuthority> authorities = new ArrayList<>();
 
-        Map<String, Object> realmAccess = (Map<String, Object>) claims.get("realm_access");
-        if (realmAccess != null) {
-            List<String> roles = (List<String>) realmAccess.get("roles");
-            if (roles != null) {
-                roles.forEach(role ->
-                        authorities.add(new SimpleGrantedAuthority("ROLE_" + role))
-                );
-            }
+        // 1. Get Root Roles (This captures ADMIN, EMPLOYEE)
+        if (claims.get("roles") instanceof List<?> rootRoles) {
+            rootRoles.forEach(role ->
+                    authorities.add(new SimpleGrantedAuthority("ROLE_" + role))
+            );
         }
-        Map<String, Object> resourceAccess = (Map<String, Object>) claims.get("resource_access");
-        if (resourceAccess != null) {
-            Map<String, Object> account =
-                    (Map<String, Object>) resourceAccess.get("account");
-            if (account != null) {
-                List<String> roles =
-                        (List<String>) account.get("roles");
-                if (roles != null) {
-                    roles.forEach(role ->
-                            authorities.add(
-                                    new SimpleGrantedAuthority("ROLE_" + role)
-                            )
-                    );
+
+        // 2. Get Resource Access Roles (This captures manage-account, view-profile)
+        if (claims.get("resource_access") instanceof Map<?, ?> resourceAccess) {
+            // Iterate through all clients in resource_access (account, realm-management, etc.)
+            resourceAccess.forEach((clientName, clientValue) -> {
+                if (clientValue instanceof Map<?, ?> clientConfig) {
+                    if (clientConfig.get("roles") instanceof List<?> clientRoles) {
+                        clientRoles.forEach(role ->
+                                authorities.add(new SimpleGrantedAuthority("ROLE_" + role))
+                        );
+                    }
                 }
-            }
+            });
         }
+
         return authorities;
     }
 
