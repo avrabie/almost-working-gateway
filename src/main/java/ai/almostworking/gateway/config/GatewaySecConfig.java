@@ -54,6 +54,7 @@ public class GatewaySecConfig {
                                 new RedirectServerAuthenticationSuccessHandler("http://localhost:5173/")
                         )
                 )
+                .csrf(ServerHttpSecurity.CsrfSpec::disable)
                 .logout(logout -> logout
                         .logoutHandler(new DelegatingServerLogoutHandler(
                                 new WebSessionServerLogoutHandler(),
