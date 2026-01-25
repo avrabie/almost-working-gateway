@@ -22,19 +22,20 @@ spring:
     oauth2:
       client:
         registration:
-          gateway-rest-api:
+          gateway-rest-client:
             client-id: gateway-rest-client
             client-secret: ${GATEWAY_CLIENT_SECRET:TqOwvN7EBjXbX4ymF7v9VV3IftfbcpjM}
             scope:
               - openid
               - profile
-              - email
-              - user:read
-              - user:write
+              - roles
+              - iaka
+#              - user:read
+#              - user:write
             authorization-grant-type: authorization_code
             redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
         provider:
-          gateway-rest-api:
+          gateway-rest-client:
             issuer-uri: ${KEYCLOAK_ISSUER_URI:http://localhost:8002/realms/intwork}
       resourceserver:
         jwt:
